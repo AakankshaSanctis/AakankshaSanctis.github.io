@@ -11,9 +11,9 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* M.S in Computer Science (Machine Learning Track), Columbia University, Sep 2022 - Dec 2023
+* M.Sc (Hons) in Economics, BITS Goa, 2015 - 2020
+* B.E (Hons) in Computer Science, BITS Goa, 2015 - 2020
 
 Work experience
 ======
