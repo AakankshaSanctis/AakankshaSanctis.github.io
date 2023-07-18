@@ -17,3 +17,6 @@ main:
     
   - extra: "Extras"
     url: /extras/
+
+  - about: "About"
+    url: /about/
