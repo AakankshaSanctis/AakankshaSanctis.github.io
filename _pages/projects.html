@@ -1,15 +1,12 @@
 ---
 layout: archive
-title: "Talks and presentations"
+title: "Projects"
 permalink: /projects/
 author_profile: true
 ---
 
-{% if site.talkmap_link == true %}
+{% include base_path %}
 
-
-{% endif %}
-
-{% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
+{% for post in site.projects reversed %}
+  {% include archive-single.html %}
 {% endfor %}
