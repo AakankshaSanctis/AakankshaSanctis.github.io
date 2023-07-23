@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+<!-- Resume -->
+<!-- 
 Education
 ======
 * M.S in Computer Science (Machine Learning Track), Columbia University, Sep 2022 - Dec 2023
@@ -56,4 +58,4 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Currently signed in to 43 different slack teams -->

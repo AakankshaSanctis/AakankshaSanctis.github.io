@@ -1,22 +1,25 @@
 # main links links
 main:
-  - title: "Projects"
-    url: /projects/
+  # - title: "Projects"
+  #   url: /projects/
 
-  - title: "Talks"
-    url: /talks/    
+  # - title: "Talks"
+  #   url: /talks/    
 
-  - title: "Teaching"
-    url: /teaching/    
-        
+  # - title: "Teaching"
+  #   url: /teaching/    
+
+
+  - title: "About"
+    url: /about/  
   - title: "Blog"
     url: /year-archive/
     
-  - title: "CV"
-    url: /cv/
+  # - title: "CV"
+  #   url: /cv/
     
-  - title: "Extras"
-    url: /extras/
+  # - title: "Extras"
+  #   url: /extras/
 
-  - title: "About"
-    url: /about/
+  # - title: "About"
+  #   url: /about/
