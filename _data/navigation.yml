@@ -13,7 +13,7 @@ main:
   - title: "About"
     url: /about/  
   - title: "Blog"
-    url: /year-archive/
+    url: /posts/
   - title: "Resume"
     url: https://drive.google.com/file/d/1Br8hZepUOsMa1JtxPxe9BgzZ1iysaA_f/view?usp=sharing
     
