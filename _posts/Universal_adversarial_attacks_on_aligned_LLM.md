@@ -21,7 +21,7 @@ Since the public release of LLM-based chat assistants like ChatGPT, there has be
 To test the alignment of these models, many attempts have been made to attack them. Jailbreaking research [[4]](Alexander Wei, Nika Haghtalab, and Jacob Steinhardt. Jailbroken: How does llm safety training
 fail? arXiv preprint arXiv:2307.02483, 2023) in this domain is very specific and relies on ingenious prompt engineering, making it brittle in practice. AutoPrompt has also shown little success in generating successful prompts to attack LLMs. However, this does not mean that LLMs are completely robust to all types of attacks. Reward models only learn about preferences regarding "naturally out-of-distribution" or intentionally harmful queries. Currently, the loss function or reward model do not take into consideration synthetic or adversarial prompts that could cause models to produce catastrophically dangerous outputs.
 
-![Universal_attacks](images/universal_adversarial_attacks_LLMs/Screenshot 2023-08-06 at 6.17.42 PM.png)
+![Universal_attacks](https://github.com/AakankshaSanctis/AakankshaSanctis.github.io/blob/master/images/universal_adversarial_attacks_LLMs/Screenshot%202023-08-06%20at%206.17.42%20PM.png)
 
 Universal and Transferable Adversarial Attacks
 on Aligned Language Models [[5]](Universal and Transferable Adversarial Attacks
@@ -38,7 +38,7 @@ This paper aims to attack aligned language models (LMs) using a simple prompt st
 Let’s dive into the details of how such adversarial prompts are generated which are universal and transferable
 #### Producing affirmative responses
 When the user enters a query, the chat system transforms it behind the scenes into the following format.
-![format](images/universal_adversarial_attacks_LLMs/Screenshot 2023-08-06 at 6.20.06 PM.png)
+![format](https://github.com/AakankshaSanctis/AakankshaSanctis.github.io/blob/master/images/universal_adversarial_attacks_LLMs/Screenshot%202023-08-06%20at%206.20.06%20PM.png)
 
 The adversarial suffix (shown in red) is optimized using a greedy coordinate gradient search. Importantly, the original user query is not altered, only the suffix. This allows developing a universal trigger that can mitigate potentially harmful responses across diverse user queries and models. By keeping the user query unchanged and optimizing the suffix alone, the approach can work for multiple input questions rather than being tied to specific phrasing.
 
@@ -56,14 +56,18 @@ However, this optimization is challenging due to the discrete nature of tokens. 
 #### Multi-modal, multi-prompt universal attack
 Finally, the authors needed to make the adversarial suffix universal so it could attack a range of LLMs. To achieve this, they ran the optimization process across multiple models. First, the suffix was tuned on a single user prompt. Then, new prompts were incrementally incorporated. By optimizing across diverse prompts, the authors produced a universal adversarial suffix that could transfer across models with similar vocabularies.
 
-![results](images/universal_adversarial_attacks_LLMs/Screenshot 2023-08-06 at 7.09.25 PM.png)
+![results](https://github.com/AakankshaSanctis/AakankshaSanctis.github.io/blob/master/images/universal_adversarial_attacks_LLMs/Screenshot%202023-08-06%20at%207.09.25%20PM.png)
 
-Discussion
+What's this means for alignment
 ------
 
-This research opens a whole new realm towards “Adversarial alignment”, which might lead to training reward models and RLHF policy to give lower rewards to potentially adversarial queries. Current alignment procedures only attenuate undersired behavior without altogether removing it and will remain suspectible to adversarial prompting attacks. One more question which arises is if adversarially aligned language models follow similar patterns to vision systems, can we find a scalable method to adversarially train these models without substantial performance drops. It was observed that some adversarial prompts are meaningful while others are not. Therefore, monitoring might seem like a good initial effort to filter adversarial queries. However, attackers can easily turn this around by attacking the detector and the model. Hence, this research leads us to a very pivotal step in modifying current alignment procedures for LLMs to avoid harmful behaviors and become more robust
+The universal transferable prompt created by adversarially searching a suffix manages to attack all the public facing LLMs very effectively. Therefore, this research opens a whole new realm towards “Adversarial alignment”. This can open directions to training reward models and RLHF policy to give lower rewards to potentially adversarial queries. However, modifications might have to be made to the current alignment procedure as well as it only attenuates undesirable behavior without altogether removing it, leaving it suspectible to adversarial prompting attacks. 
+
+Further, if adversarially aligned language models follow similar patterns to vision systems, can we find a scalable method to adversarially train these models without substantial performance drops. Even though vision models have successful adversarial training strategies, they are seldom used practically because of computational inefficiency.
+
+The results from this research show that some adversarial prompts are meaningful while others are not. Therefore, monitoring might seem like a good initial effort to filter adversarial queries. However, attackers can easily turn this around by attacking the detector and the model. This means that safety in LLMs might need the hybrid combination of robustness, monitoring, alignment and systemic safety with a scalable adversarial objective which can make models less sensitive to noisy perturbations. Hence, this research leads us to a very pivotal step in modifying current alignment procedures for LLMs to avoid harmful behaviors and become more robust
 
 #### Ethical consideration
 
-This blog is an attempt to explore possible avenues of research about LLMs and is not intended for misuse on attacking language models. 
+This blog is an attempt to explore possible avenues of research about LLMs and machine learning safety and is not intended for misuse on attacking language models. 
 
