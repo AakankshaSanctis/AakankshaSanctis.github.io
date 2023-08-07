@@ -1,7 +1,7 @@
 ---
 title: 'An adversarial lens towards aligned LLMs'
 date: 2023-08-06
-permalink: /posts/adversarial_attacks_against_aligned_LLM
+permalink: /posts/adversarial_attacks_against_aligned_LLM/
 tags:
   - adversarial attacks
   - ml safety
@@ -13,6 +13,7 @@ tags:
   - RLHF
   - Constitutional AI
 ---
+
 An adversarial lens towards aligned Large Language Models
 ======
 
